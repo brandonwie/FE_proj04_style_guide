@@ -1,0 +1,27 @@
+// ======================================
+//  Image Styles
+// ======================================
+
+.img__setting {
+    //align for 'med' size
+    align-items: center;
+    //align for mobile size
+    text-align: center;
+    .img--frame {
+        //95% makes the image sharp centered
+        width: 85%;
+        padding: 10px;
+        border: 1px solid $img-frame;
+        @include mq('med') {
+            // to make it similar to the mockup
+            width: 75%;
+        }
+    }
+    .img--avatar {
+        margin-top: 20px;
+        @include mq('med') {
+            // to align vertical center
+            margin-top: 0;
+        }
+    }
+}

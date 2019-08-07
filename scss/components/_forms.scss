@@ -1,0 +1,45 @@
+// ======================================
+//  Form Styles
+// ======================================
+
+.form {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 1.1em;
+    .img--avatar {
+        margin-top: 10px;
+    }
+    .form__label--hidden {
+        visibility: hidden;
+    }
+    // a new div for flexbox
+    .log-in {
+        @include flex($dir: column);
+        .form__input {
+            width: 90%;
+            margin: auto;
+            font-size: 0.8em;
+            outline: none;
+            height: 35px;
+            padding-left: 20px;
+            border: none;
+            border-bottom: 7px solid $color-emerald;
+            &::placeholder {
+                font-size: 1.1em;    
+            }
+        }
+        .btn--default {
+            // button style mixin
+            @include button-style {
+                display: block;
+                margin-top: 25px;
+            }
+            background-color: $color-lightblue;
+            &:hover {
+                background-color: $color-blue;
+                transition: background-color .3s ease-in-out;
+            }
+        }
+    }
+
+}

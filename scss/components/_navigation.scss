@@ -1,0 +1,51 @@
+// ======================================
+//  Navigation Styles
+// ======================================
+
+.main--logo {
+    margin: 25px auto;
+    @include mq('med') {
+        text-align: center;
+    }
+}
+
+.grid__col--9 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav {
+    text-align: center;
+    margin: 25px auto;
+    @include mq('med') {
+        @include flex($just: center);
+        margin: 0;
+        }
+    .nav__item {
+        font-size: 1.15em; 
+        margin-bottom: 10px;
+        @include mq('med') {
+            margin-bottom: 0;
+            margin-left: 20px;
+        }
+        a {
+            display: block;
+            border-radius: 5px;
+            // for block background on hover
+            line-height: 50px;
+            &:visited {
+                color: $letters;
+            }
+            &:hover {
+                color: $color-white;
+                background-color: $color-emerald;
+            }
+            transition: color .3s ease-in-out, background-color .3s ease-in-out;
+            @include mq('med') {
+                display: inline-block;
+                padding: 3px 10px;
+                line-height: 35px;
+            }
+        }
+    }
+}      

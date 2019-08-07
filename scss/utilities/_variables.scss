@@ -1,0 +1,47 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Colors: used ColorZilla color-picker
+$color-white: #fff;
+
+$color-red: #E47579;
+$color-lightred: #EC9FA3;
+
+$color-orange: #FD7856;
+$color-lightorange: #FD9F85;
+
+$color-green: #62CC82;
+$color-lightgreen: #87D9A0;
+
+$color-emerald: #58E1C0;
+$color-lightemerald: #80E8D1;
+
+$color-blue: #3FAACA;
+$color-lightblue: #52DDFC;
+
+$color-purple: #927BC1;
+$color-lightpurple: #DEB2EE;
+
+$letters: #858585;
+$img-frame: lightgrey;
+
+// Fonts
+$font-stack-primary: 'Helvetica Neue', sans-serif;
+
+// Breakpoints: created other possible breakpoints for further maintenances
+$breakpoints: (
+  'xs': 575px, 
+  'sm': 576px,
+ 'med': 768px,
+  'lg': 992px,  
+);
+
+// Button Colors
+$button-color: (
+    'default': $color-lightblue,
+    'success': $color-green,
+    'error': $color-red,
+    'warning': $color-orange,
+    'info': $color-purple,
+);

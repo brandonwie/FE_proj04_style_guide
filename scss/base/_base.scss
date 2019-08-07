@@ -1,0 +1,25 @@
+// ======================================
+//  Base Styles
+// ======================================
+
+.container {
+    font-family: $font-stack-primary;
+    color: $letters;
+    margin: auto;
+    width: 85%;
+    line-height: 1.5;
+    a {
+        text-decoration: none;
+        &:visited {
+            text-decoration: none;
+        }
+    }
+    @include mq('med') {
+        max-width: 1400px;
+    }
+}
+
+.headline--secondary {
+    font-size: 18px;
+    font-weight: 300;
+}

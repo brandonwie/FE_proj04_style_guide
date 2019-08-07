@@ -1,0 +1,117 @@
+// **********************************************
+// _grid.scss
+// styles related to the grid system and
+// main container.
+// major grid styles have been added here for you
+// but additional styling may be needed
+// **********************************************
+
+
+// grid base class
+.grid {
+
+  // .grid__row
+  &__row {
+    padding: 1em 10px;
+    display: flex;
+    flex-direction: column;
+// center items and text
+    @include mq('med') {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      & [class^=grid__col] {
+          text-align: center;
+      }
+  }
+
+    // NOTE: replace with media query mixin if aiming for exceeds
+    @include mq('med') {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  // .grid__col
+  &__col {
+
+    // create grid columns dynamically
+    // loop through each column size
+    @for $i from 1 through 12 {
+
+      // concatenate CSS selector, ie when $i = 1,
+      // selector would be .grid__col--1
+      &--#{$i} {
+
+        // base styles applied to all grid columns 
+        // NOTE: could be converted to a placeholder, along with margin
+        // from the  media query
+        margin-top: 10px;
+        flex-basis: 100%;
+
+        // NOTE: replace with media query mixin if aiming for exceeds
+        @include mq('med') {
+
+          // base stlyes applied to all grid columns
+          margin-top: 0;
+
+          // make column width a percentage of the column number / total columns
+          flex-basis: #{$i / 12 * 100 + "%"
+          };
+        }
+      }
+    }
+  }
+}
+
+// targets all elements with classes that begin with grid__col
+[class^=grid__col] {
+  // grid__col + grid__col, targets two sibling columns
+  & + & {
+
+    // NOTE: replace with media query mixin if aiming for exceeds
+    @include mq('med') {
+
+      // add grid gutter
+      margin-left: 10px;
+    }
+  }
+}
+
+.grid-system {
+  margin-bottom: 20px;
+  @include mq('med') {
+  }
+  [class^=grid__col] {
+    line-height: 45px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    @include mq ('med') {
+      padding-left: 0;
+    }
+  }
+  .grid__col {
+    &--12 {
+      background-color: $color-lightemerald;
+    }
+    &--6 {
+      background-color: $color-blue;
+    }
+    &--4 {
+      background-color: $color-lightblue;
+    }
+    &--3 {
+      background-color: $color-lightpurple;
+    }
+    &--5 {
+      background-color: $color-lightgreen;
+    }
+    &--7 {
+      background-color: $color-lightred;
+    }
+    &--8 {
+      background-color: $color-lightorange;
+    }
+  }
+}

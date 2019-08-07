@@ -1,0 +1,54 @@
+// =========================================
+//  Mixins
+// =========================================
+
+// Media Queries
+@mixin mq($break) {
+    $value: map-get($breakpoints, $break);
+    $sm: map-get($breakpoints, 'sm');
+
+    @if $value < $sm {
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+}
+
+// Flexbox settings
+@mixin flex(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}
+
+// Button Colors
+@mixin button-color($map) {
+    @each $button-color, $color in $button-color {
+        &--#{$button-color} {
+            background-color: $color;
+        }
+    }
+}
+
+// Button Style
+@mixin button-style {
+    height: 45px;
+    border: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-white;
+    border-radius: 5px;
+    outline: none;
+    @content;
+}

@@ -1,0 +1,40 @@
+// ======================================
+//  Typography Styles
+// ======================================
+
+.card {
+    font-size: 1.1em;
+    text-align: left;
+    @include mq('med') {
+        width: 90%;
+    }
+    a {
+      color: $color-lightblue;
+      font-weight: 500;
+    }
+    .headline--primary {
+      color: $color-emerald;
+      font-size: 1.8em;
+      line-height: 1;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .blockquote {
+      font-size: 1.5em;
+      font-style: italic;
+      line-height: 1.2;
+      border-left: 10px solid $color-emerald;
+      border-radius: 5px;
+      padding-left: 20px;
+      width: 80%;
+      margin: 20px auto;
+      @include mq('med') {
+          font-size: 1.4em;
+          width: 90%;
+      }
+    }
+  }
