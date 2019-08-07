@@ -704,11 +704,10 @@ ul, ol {
 @media (min-width: 768px) {
   .buttons__setting [class^=btn] {
     display: inline-block;
-    width: 20%;
+    width: auto;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-top: 0;
-  }
-  .buttons__setting [class^=btn]:not(:first-child) {
-    margin-left: 25px;
   }
 }
 

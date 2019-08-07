@@ -23,13 +23,11 @@
         }
         @include mq('med') {
             display: inline-block;
-            width: 20%;
+            width: auto;
+            padding-left: 5%;
+            padding-right: 5%;
             //remove unnecessary margins from mobile layout
             margin-top: 0;
-            &:not(:first-child){
-                //button margins
-                margin-left: 25px;
-            }
         }
     }
 }
